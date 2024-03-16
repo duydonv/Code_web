@@ -1,0 +1,128 @@
+#first-heading {
+    color: green;
+}
+#first-heading::selection {
+    background-color: violet;
+}
+#second-heading {
+    color: blue;
+}
+/* .third-heading {
+    color: purple;
+    font-size: 20px;
+} */
+/* Dấu chấm viết liền thì nó là chọn tất cả các thẻ thuộc class 1 2 */
+.third-heading.four-heading {  
+    color: palegoldenrod;
+}
+/* Dấu chấm cách ra là chọn thẻ thuộc class 2 là con của class 1 */
+.five-heading .third-heading {
+    color: aqua;
+}
+/* Dấu * sẽ đại diện cho tất cả các thẻ */
+ /* Không cần viết style nữa chỉ cần viết nd thôi */
+ /* Select toi id dung # con select toi class dung . */
+
+/* [class]::after {
+    content: " ("  attr(class) ")";
+} */
+/* Hiển thị tên class bên cạnh */
+
+/*
+Độ ưu tiên trong CSS 
+    1. Internal, External: ưu tiên cho cái gọi sau
+    2. Inline - 1000
+    3. #id - 100
+    4. Class - 10
+    5. Tag - 1
+    Điểm cao hơn sẽ có ưu tiên cao hơn
+    6. Equal specificity: Nếu mà gọi css giống nhau thì ưu tiên cái gọi sau
+    7. Universal selector and inherited: gọi cho tất cả (điểm bằng 0)
+    8. !important : đặc biệt quan trọng ưu tiên hơn tất cả, nếu có nhiều hơn 1 important gọi đến thẻ thì xét tiếp đến điểm
+*/
+ 
+/* Bien trong CSS */
+:root {
+    --text_color: purple;
+}
+#test {
+    color: var(--text_color);
+}
+/* Cũng có khái niệm biến toàn cục và biến cục bộ */
+
+/* Đơn vị trong CSS 
+1. Absolute units (Đơn vị tuyệt đối): Trình duyệt thay đổi kích thước thì kích thước phần tử cũng không thay đổi
+    px
+2. Relative units (Đơn vị tương đối)
+    % Phụ thuộc vào thẻ chưa nó
+    rem Phụ thuộc vào thẻ html
+    em Phụ thuộc vào thẻ gần nhất
+    vw - viewport width : khung nhìn ngang 
+    vh - viewport height: Khung nhìn dọc
+    
+*/
+
+/* CSS functions 
+    1. var()
+    2. linear-gradient()
+    3. rgba()
+    4. rgb()
+    5. calc() - Tính toán
+    6. attr() -   
+*/
+
+/* CSS pseudo-classes - Lop gia
+    1. :root Tham chiếu tới phần tử gốc trong file html
+    2. :hover Kích hoạt khi trỏ chuột vào phần tử được css
+    3. :active Kích hoạt khi bấm và giữ vào phần tử
+    4. :first-child
+    5. :last-child
+*/
+
+/* CSS pseudo-elemets - Phần tử giả 
+    1. ::before
+    2. ::after
+    3. ::first-letter
+    4. ::first-line
+    5. ::selection
+*/
+
+.boxx {
+    width: 60px;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 {
+    background-color: black;
+}
+.box2 {
+    background-color: orange;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 10px solid blue;
+}
+.box3 {
+    background-color: red;
+    /* padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; */
+    /* padding: 10px;  */
+    /* nêu ta đặt các khoảng đệm như nhau thì có thể khai báo như trên */
+    /* border-width: 10px;
+    border-style: solid; */
+    /* Phải có kiểu thì border mới được thể hiện */
+    /* border-color: aqua; */
+    /* border: 10px solid aqua; */
+    /* Đặt kích thước border là 10px nhưng chỉ hiển thị 9.6px là do kích thước màn hình */
+    margin: 10px 20px 30px 40px;
+    /* margin ở đây được hiểu là khoảng cách thật sự, nó khác padding với border ở chỗ là nó không
+    làm tăng kích thước của element */
+    /* Cú pháp viết gọn giống với padding */
+}
+/* Border được biểu diễn bằng nét liền thay thay vì nét đứt như padding và margin
+vì nó được định nghĩa là lớp viền bao ngoài 1 element */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <!-- Các thẻ HTML thông dụng
+    1. h1 - h6 - heading (h1 là chữ to nhất rồi nhỏ dần đến h6)
+    2. p - paragraph 
+    3. img - image
+    4. a - anchor
+    5. ul, li - unordered list, list item
+    6. table
+    7. input Tạo ra 1 ô cho người dùng tương tác
+    8. buttom Tạo ra 1 nút
+    9. div Tạo 1 khối bao quanh các phần tử khác
+    -->
+    <!--Phần đầu-->
+
+    <!-- CSS in HTML
+    1. Internal Dùng ở bất cứ phần nào trong file 
+    2. External Viết css ở bên ngoài
+    3. Inline Sử dụng atrribute style trong thẻ mở của html
+    -->
+    <head>
+        <title>Pham Duy Dong</title>
+        <!-- Thẻ hỗ trợ sử dụng tiếng Việt trong phần body -->
+        <meta charset="utf-8">  
+        <link rel="stylesheet" href="main.css">
+        <!-- <style>
+            h1{
+                color: red;
+                font-size: 30px;
+            }
+        </style> -->
+        <style>
+            .box{
+                width: 100vw;
+                height: 100vh;
+                background-image: linear-gradient(0, rgba(255, 255, 0 ,0.5), rgba(0, 0, 255, 0.5));
+                /* background-image: url(https://media.istockphoto.com/id/1190577091/vi/vec-to/h%C3%ACnh-d%E1%BA%A1ng-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-h%E1%BB%A3p-th%E1%BB%9Di-trang-hi%E1%BB%87n-%C4%91%E1%BA%A1i-trong-m%C3%A0u-pastel-thi%E1%BA%BFt-k%E1%BA%BF-vect%C6%A1-s%E1%BA%A1ch-scandinavia.jpg?s=612x612&w=0&k=20&c=A9DRZEMRL20FgjzkIjuxaSupgo1iPwuHQ6k21emrppM=); */
+                background-size: 100%;
+                /* Nếu chỉ nhập 1 kt thì sẽ hiểu đấy là chiều ngang còn chiều cao sẽ lấy theo tỉ lệ ban đầu
+                Và background-image có 1 đặc điểm là sẽ tự lặp lại ảnh sao cho kín box đã tạo */
+                background-repeat: no-repeat;
+            }
+            .box::before{
+                content: "";
+                /* Phần content là bắt buộc phải có dù nó có là chuỗi rỗng tại nó chính là cái để phần tử giả có thể tồn tại */
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: gray;
+            }
+            .hehe:hover{
+                color: blueviolet;
+            }
+            .hehe::first-letter {
+                font-size: 50px;
+            }            
+
+        </style>
+    </head>
+    <!-- Phần thân -->
+    <body>
+        <h1 class="hehe">Đạt danh hiệu Sinh viên 5 tốt thì được gì?</h1>
+        <h1 id="first-heading">Tiêu đề 1</h1>
+        <h1 id="second-heading">Tiêu đề 2</h1>
+        <h1 class="third-heading">Tiêu đề 4</h1>
+        <h2 class="third-heading four-heading">Lorem ipsum dolor sit amet.</h2>
+        <div class="five-heading">
+            <h1 class="third-heading">Tiêu đề 3</h1>
+        </div>
+        <h1 id="test">Tieu de 5</h1>
+        <input type="text">
+        <input type="checkbox">
+        <button>Dang ky</button>
+        <div class="box"></div>
+
+
+        <p>Hội nghị đã bàn nhiều nội dung, trong đó có Chương trình hành động thực hiện Nghị quyết Đại hội đại biểu toàn quốc Hội Sinh viên Việt Nam lần thứ XI, nhiệm kỳ 2023 - 2028.
+        </p>
+        <!-- src ở đây là link của ảnh, alt sẽ thay ảnh khi ảnh bị lỗi  -->
+        <img src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2024/2/29/anh3-17091933554021565137372.jpg" alt="Ảnh đẹp">
+        <a href="https://thanhnien.vn/dat-danh-hieu-sinh-vien-5-tot-thi-duoc-gi-185240229151300799.htm">Truy cap bai bao</a>
+        <ul>
+            <li>Bài 1.1</li>
+            <li>Bài 1.2</li>
+        </ul>
+        <table>
+            <thead>
+                <th>STT</th>
+                <th>Ten</th>
+                <th>Dia chi</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- So luong td tuong duong voi so luong th o tren -->
+                    <td>1</td>
+                    <td>Duy Dong</td>
+                    <td>Bac Giang</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Thuy Linh</td>
+                    <td>Thanh Hoa</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="boxx box1">Box 1</div>
+        <div class="boxx box2">Box 2</div>
+        <div class="boxx box3">Box 3</div>
+    </body>
+</html>
